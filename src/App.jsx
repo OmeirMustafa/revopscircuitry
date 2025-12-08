@@ -366,11 +366,40 @@ const Contact = () => {
 
             <div className="space-y-6">
               {[
-                { icon: <Mail />, label: "Email Me", val: "ask.ahmedmustafa@gmail.com", href: "mailto:ask.ahmedmustafa@gmail.com", color: "text-emerald-400", bg: "bg-emerald-500/10" },
-                { icon: <Phone />, label: "Call Me", val: "+88 01728407485", href: "tel:+8801728407485", color: "text-blue-400", bg: "bg-blue-500/10" },
-                { icon: <MapPin />, label: "Location", val: "Bashundhara R/A, Dhaka", href: "#", color: "text-purple-400", bg: "bg-purple-500/10" },
+                {
+                  icon: <Mail />,
+                  label: "Email Me",
+                  val: "ask.ahmedmustafa@gmail.com",
+                  href: "https://mail.google.com/mail/?view=cm&fs=1&to=ask.ahmedmustafa@gmail.com",
+                  color: "text-emerald-400",
+                  bg: "bg-emerald-500/10",
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                },
+                {
+                  icon: <Phone />,
+                  label: "Call Me",
+                  val: "+88 01728407485",
+                  href: "tel:+8801728407485",
+                  color: "text-blue-400",
+                  bg: "bg-blue-500/10"
+                },
+                {
+                  icon: <MapPin />,
+                  label: "Location",
+                  val: "Bashundhara R/A, Dhaka",
+                  href: "#",
+                  color: "text-purple-400",
+                  bg: "bg-purple-500/10"
+                },
               ].map((contact, i) => (
-                <a key={i} href={contact.href} className="flex items-center gap-6 text-white hover:text-emerald-400 transition-colors bg-white/5 p-4 rounded-xl border border-white/5 hover:border-white/10 group">
+                <a
+                  key={i}
+                  href={contact.href}
+                  target={contact.target || "_self"}
+                  rel={contact.rel || ""}
+                  className="flex items-center gap-6 text-white hover:text-emerald-400 transition-colors bg-white/5 p-4 rounded-xl border border-white/5 hover:border-white/10 group"
+                >
                   <div className={`w-12 h-12 rounded-full ${contact.bg} flex items-center justify-center ${contact.color} group-hover:scale-110 transition-transform`}>
                     {contact.icon}
                   </div>
@@ -390,29 +419,42 @@ const Contact = () => {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="bg-white/5 p-8 md:p-10 rounded-3xl border border-white/10 backdrop-blur-sm">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              {[
-                { label: "Name", type: "text", placeholder: "John Doe" },
-                { label: "Email", type: "email", placeholder: "john@company.com" },
-              ].map((field, i) => (
-                <div key={i}>
-                  <label className="block text-sm font-bold text-white/70 mb-2 uppercase tracking-wide">{field.label}</label>
-                  <input
-                    type={field.type}
-                    placeholder={field.placeholder}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder-white/20 focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-all duration-300"
-                  />
-                </div>
-              ))}
+            <form action="https://formspree.io/f/mblnakyz" method="POST" className="space-y-6">
+              <div>
+                <label className="block text-sm font-bold text-white/70 mb-2 uppercase tracking-wide">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder-white/20 focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-all duration-300"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-white/70 mb-2 uppercase tracking-wide">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="john@company.com"
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder-white/20 focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-all duration-300"
+                />
+              </div>
               <div>
                 <label className="block text-sm font-bold text-white/70 mb-2 uppercase tracking-wide">Message</label>
-                <textarea rows="4" placeholder="Tell me about your revenue goals..." className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder-white/20 focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-all duration-300"></textarea>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Tell me about your revenue goals..."
+                  required
+                  className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder-white/20 focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-all duration-300"
+                ></textarea>
               </div>
 
-              <button type="submit" className="w-full btn btn-primary py-4 justify-center text-lg tracking-wide">
+              <button type="submit" className="w-full btn btn-primary py-4 justify-center text-lg tracking-wide hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all">
                 Send Request <Send size={18} />
               </button>
-              <p className="text-center text-white/30 text-xs mt-4">*This form is for demonstration.</p>
+              <p className="text-center text-white/30 text-xs mt-4">Protected by Formspree.</p>
             </form>
           </motion.div>
         </div>
