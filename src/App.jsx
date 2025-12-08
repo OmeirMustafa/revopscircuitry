@@ -29,14 +29,15 @@ const Navbar = () => {
   ];
 
   return (
+  return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#050505]/90 backdrop-blur-md py-4 border-b border-white/5' : 'bg-transparent py-6'}`}
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/90 backdrop-blur-md py-4 border-b border-white/5' : 'bg-transparent py-6'}`}
     >
       <div className="container flex justify-between items-center">
-        <Link to="hero" smooth={true} duration={800} className="text-2xl font-bold cursor-pointer font-outfit tracking-tighter z-50">
+        <Link to="hero" smooth={true} duration={800} className="text-xl md:text-2xl font-bold cursor-pointer font-outfit tracking-tighter z-50">
           KAZI<span className="text-emerald-400">.</span>REVOPS
         </Link>
 
@@ -89,13 +90,13 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center pt-24 md:pt-0">
       <div className="absolute inset-0 bg-[#050505]/85 z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-0"></div>
 
       <div className="container relative z-10 text-center px-4">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-          <span className="inline-block py-1 px-3 border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-emerald-400 mb-6 bg-black/30 backdrop-blur-sm">
+          <span className="hidden md:inline-block py-1 px-3 border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-emerald-400 mb-6 bg-black/30 backdrop-blur-sm">
             Revenue Infrastructure Architect
           </span>
         </motion.div>
