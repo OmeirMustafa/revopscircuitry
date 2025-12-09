@@ -7,16 +7,18 @@ export default {
     theme: {
         extend: {
             colors: {
-                'bg-dark': '#050505',
-                'accent-primary': '#00dc82',
+                'neon-blue': '#04d9ff',
+                'carbon-gray': '#121212',
+                'deep-black': '#050505',
             },
             fontFamily: {
-                'outfit': ['Outfit', 'sans-serif'],
+                sans: ['Inter', 'sans-serif'],
+                display: ['Sora', 'sans-serif'],
             },
             animation: {
-                'bounce-slow': 'bounce 3s infinite',
+                'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             }
         },
     },
     plugins: [],
-}
+};

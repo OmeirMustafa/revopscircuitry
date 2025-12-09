@@ -1,95 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-dark: #050505;
-  --text-main: #ffffff;
-  --accent-primary: #00dc82;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #050505;
+    color: white;
+  }
+
+  body {
+    @apply font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* font-display removed to fix build error */
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer components {
+  .btn-primary-neon {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-neon-blue text-black font-bold uppercase tracking-wider rounded-lg hover:bg-white hover:scale-105 transition-all duration-300;
+  }
 
-body {
-  font-family: 'Outfit', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  .btn-secondary-neon {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-white/5 border border-white/10 text-white font-bold uppercase tracking-wider rounded-lg hover:bg-white/10 hover:border-white/30 transition-all duration-300;
+  }
 
-/* Master Layout Fixes */
-.section {
-  padding: 80px 20px;
-  position: relative;
-  overflow: hidden;
-}
+  .btn-outline-neon {
+    @apply border border-neon-blue text-neon-blue rounded-lg hover:bg-neon-blue hover:text-black transition-all duration-300 uppercase tracking-wider font-bold;
+  }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Button Styles */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: white;
-  color: black;
-}
-
-.btn-primary:hover {
-  background: var(--accent-primary);
-  box-shadow: 0 0 25px rgba(0, 220, 130, 0.5);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-  color: white;
-}
-
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: white;
-  transform: translateY(-2px);
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
 }

@@ -1,74 +1,77 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-scroll';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center">
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/80 z-0"></div>
+        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505] pt-20">
+            {/* Background Ambience */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neon-blue/10 via-transparent to-transparent opacity-50"></div>
 
-            {/* Subtle Gradient Mesh Support */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-0"></div>
-
-            <div className="container relative z-10 text-center px-4">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                    <span className="inline-block py-1 px-3 border border-white/20 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-emerald-400 mb-6 bg-black/30 backdrop-blur-sm">
-                        Revenue Infrastructure Architect
-                    </span>
-                </motion.div>
-
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
-                >
-                    Stop Guessing. <br />
-                    <span className="gradient-text">Start Engineering Your Revenue.</span>
-                </motion.h1>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="max-w-2xl mx-auto text-lg md:text-xl text-white/60 mb-10 leading-relaxed"
-                >
-                    I build high-velocity revenue engines for B2B SaaS and Agencies.
-                    From CRM architecture to automated workflow systems—I turn data into predictable growth.
-                </motion.p>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                >
-                    <Link to="contact" smooth={true} duration={500} className="btn btn-primary px-8 py-4 text-lg">
-                        Consult With Me
-                    </Link>
-                    <Link to="work" smooth={true} duration={500} className="btn btn-outline px-8 py-4 text-lg">
-                        View Case Studies
-                    </Link>
-                </motion.div>
+            {/* 3D Grid/System Visual Placeholder */}
+            <div className="absolute inset-0 z-0 opacity-20">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
             </div>
 
-            {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce"
-            >
-                <Link to="about" smooth={true} duration={500} className="cursor-pointer text-white/50 hover:text-white">
-                    <ArrowDown size={32} />
-                </Link>
-            </motion.div>
+            <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
+
+                {/* Left: Copy */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="text-left"
+                >
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.1] mb-8 tracking-tight">
+                        I Design Revenue <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-white/80">Systems That Scale</span> <br />
+                        Without Chaos
+                    </h1>
+
+                    <p className="text-lg md:text-xl text-white/60 mb-10 max-w-xl font-light leading-relaxed">
+                        Fractional RevOps + Revenue Architecture for teams that want predictable growth, clean data, automated processes, and zero operational bottlenecks.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-5">
+                        <Link to="contact" smooth={true} duration={800} offset={-70} className="btn-primary-neon group">
+                            Request a Revenue Architecture Audit
+                            <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <Link to="process" smooth={true} duration={800} offset={-70} className="btn-secondary-neon">
+                            See How I Work
+                        </Link>
+                    </div>
+                </motion.div>
+
+                {/* Right: 3D Holographic Visual */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                    className="relative h-[400px] md:h-[600px] w-full flex items-center justify-center"
+                >
+                    {/* Central Core */}
+                    <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        className="w-40 h-40 md:w-64 md:h-64 rounded-full border border-neon-blue/30 absolute border-dashed"
+                    ></motion.div>
+                    <motion.div
+                        animate={{ rotate: -360 }}
+                        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                        className="w-60 h-60 md:w-96 md:h-96 rounded-full border border-white/10 absolute"
+                    ></motion.div>
+
+                    {/* Nodes */}
+                    <div className="relative z-10">
+                        <div className="w-24 h-24 bg-neon-blue/10 backdrop-blur-md rounded-xl border border-neon-blue/50 flex items-center justify-center shadow-[0_0_30px_rgba(57,169,255,0.3)]">
+                            <div className="w-4 h-4 bg-neon-blue rounded-full animate-pulse"></div>
+                        </div>
+                        {/* Orbiting Elements would go here for complex 3D effect */}
+                    </div>
+                </motion.div>
+            </div>
         </section>
     );
 };
