@@ -16,7 +16,7 @@ const About = () => {
                     <div className="absolute inset-0 bg-neon-blue/20 blur-[100px] rounded-full"></div>
                     <img
                         src="/profile.jpg"
-                        alt="Kazi Ahmed Mustafa - Revenue Architect"
+                        alt="RevOpsCircuitry - Revenue Architecture"
                         width="800"
                         height="800"
                         loading="lazy"

@@ -28,8 +28,11 @@ export const Navbar = () => {
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-4 bg-[#050505]/80 backdrop-blur-lg border-b border-white/5' : 'py-6 bg-transparent'}`}
         >
             <div className="container px-4 flex justify-between items-center">
-                <Link to="hero" smooth={true} duration={800} className="text-xl font-bold font-display text-white cursor-pointer tracking-tighter">
-                    KAZI<span className="text-neon-blue">.</span>REVOPS
+                <Link to="hero" smooth={true} duration={800} className="flex items-center gap-2 cursor-pointer group">
+                    <div className="w-3 h-3 bg-neon-blue rounded-full shadow-[0_0_10px_#04d9ff] group-hover:shadow-[0_0_20px_#04d9ff] transition-shadow"></div>
+                    <span className="text-xl font-bold font-mono text-white tracking-tighter">
+                        RevOps<span className="text-neon-blue">Circuitry</span>
+                    </span>
                 </Link>
 
                 {/* Desktop */}
@@ -90,7 +93,7 @@ export const Footer = () => {
         <footer className="py-12 bg-[#050505] border-t border-white/5">
             <div className="container px-4 text-center">
                 <p className="text-white/40 text-sm">
-                    &copy; {new Date().getFullYear()} Kazi Ahmed Mustafa. Revenue Systems Architect.
+                    &copy; {new Date().getFullYear()} RevOpsCircuitry. Engineering the Path to Revenue.
                 </p>
             </div>
         </footer>
