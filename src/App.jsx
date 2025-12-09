@@ -13,6 +13,8 @@ import Process from './components/Process';
 import Proof from './components/Proof';
 import { Footer } from './components/Navigation'; // Pulling Footer from same file
 
+import WhyFractional from './components/WhyFractional';
+
 function App() {
   return (
     <div className="bg-[#050505] min-h-screen text-white font-sans selection:bg-neon-blue/30 selection:text-white">
@@ -27,6 +29,7 @@ function App() {
         <Process />
         <Proof />
         <Services />
+        <WhyFractional />
         <About />
         <Contact />
       </main>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { ArrowRight } from 'lucide-react';
 import ContactModal from './ContactModal';
+import RevenueCircuit from './RevenueCircuit';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,32 +53,15 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-                {/* Right: 3D Holographic Visual */}
+                {/* Right: Revenue Circuit Visual */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="relative h-[400px] md:h-[600px] w-full flex items-center justify-center"
+                    className="relative h-[400px] md:h-[600px] w-full flex items-center justify-center border border-white/5 rounded-3xl bg-white/5 backdrop-blur-sm overflow-hidden"
                 >
-                    {/* Central Core */}
-                    <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                        className="w-40 h-40 md:w-64 md:h-64 rounded-full border border-neon-blue/30 absolute border-dashed"
-                    ></motion.div>
-                    <motion.div
-                        animate={{ rotate: -360 }}
-                        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                        className="w-60 h-60 md:w-96 md:h-96 rounded-full border border-white/10 absolute"
-                    ></motion.div>
-
-                    {/* Nodes */}
-                    <div className="relative z-10">
-                        <div className="w-24 h-24 bg-neon-blue/10 backdrop-blur-md rounded-xl border border-neon-blue/50 flex items-center justify-center shadow-[0_0_30px_rgba(57,169,255,0.3)]">
-                            <div className="w-4 h-4 bg-neon-blue rounded-full animate-pulse"></div>
-                        </div>
-                        {/* Orbiting Elements would go here for complex 3D effect */}
-                    </div>
+                    <div className="absolute top-4 left-4 text-xs font-mono text-white/30">SYSTEM_STATUS: ONLINE</div>
+                    <RevenueCircuit />
                 </motion.div>
             </div>
         </section>

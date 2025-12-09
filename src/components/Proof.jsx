@@ -7,19 +7,19 @@ const Proof = () => {
             title: "Case 1: Funnel Visibility Fix",
             situation: "Team couldn’t track lead flow.",
             action: "Rebuilt lifecycle + automated handoff rules.",
-            result: "Leadership gained real-time visibility and forecasting accuracy."
+            result: "Reduced reporting latency by 15 hours/week for leadership."
         },
         {
             title: "Case 2: Process Automation",
             situation: "Manual processes slowed sales.",
             action: "Designed revenue workflows + automated follow-ups.",
-            result: "Faster response times and pipeline movement."
+            result: "Automated lead processing for 2,000+ prospects/month."
         },
         {
             title: "Case 3: Multi-Tool Unification",
             situation: "Tools were disconnected.",
             action: "Integrated CRM, outreach, forms, reporting.",
-            result: "Single source of truth, reduced errors."
+            result: "Achieved 100% data accuracy across HubSpot & Apollo."
         }
     ];
 
