@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { ArrowRight } from 'lucide-react';
-import ContactModal from './ContactModal';
-import RevenueCircuit from './RevenueCircuit';
+
+// Lazy Load Heavy Components
+const ContactModal = lazy(() => import('./ContactModal'));
+const RevenueCircuit = lazy(() => import('./RevenueCircuit'));
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505] pt-20">
-            <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            <Suspense fallback={null}>
+                <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            </Suspense>
 
             {/* Background Ambience */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neon-blue/10 via-transparent to-transparent opacity-50"></div>
@@ -60,7 +64,9 @@ const Hero = () => {
                     className="relative h-[400px] md:h-[600px] w-full flex items-center justify-center border border-white/5 rounded-3xl bg-white/5 backdrop-blur-sm overflow-hidden"
                 >
                     <div className="absolute top-4 left-4 text-xs font-mono text-white/30">SYSTEM_STATUS: ONLINE</div>
-                    <RevenueCircuit />
+                    <Suspense fallback={<div className="text-white/20 font-mono text-xs">INITIALIZING_circuitry...</div>}>
+                        <RevenueCircuit />
+                    </Suspense>
                 </motion.div>
             </div>
         </section>
