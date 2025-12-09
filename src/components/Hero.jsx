@@ -42,10 +42,9 @@ const Hero = () => {
                     <div className="flex flex-col sm:flex-row gap-5">
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="btn-primary-neon group relative overflow-hidden"
+                            className="btn-primary-neon group relative overflow-hidden z-20"
                         >
                             <span className="relative z-10 font-bold text-black group-hover:text-black">Request a Revenue Architecture Audit</span>
-                            <ArrowRight className="inline-block ml-2 w-5 h-5 text-black group-hover:translate-x-1 transition-transform relative z-10" />
                         </button>
                         <Link to="process" smooth={true} duration={800} offset={-70} className="btn-secondary-neon z-20 cursor-pointer">
                             See How I Work

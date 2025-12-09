@@ -1,23 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Box, Anchor, Rocket } from 'lucide-react';
+import { ArrowRight, Database, Shield, Rocket } from 'lucide-react';
 import { Link } from 'react-scroll';
 
 const Services = () => {
     const products = [
         {
             title: "Revenue Infrastructure Build",
-            icon: <Box className="w-10 h-10 text-neon-blue" />,
+            icon: <Database className="w-10 h-10 text-neon-blue" />,
             subtitle: "The Flagship",
-            desc: "A one-time architectural overhaul. We migrate, clean, and architect your CRM (HubSpot/Salesforce) to be the single source of truth.",
+            desc: "One-time architectural overhaul. I migrate, clean, and architect your CRM to be the single source of truth.",
             deliverables: ["Tech Stack Audit", "CRM Architecture", "Data Enrichment Layers"],
             highlight: false
         },
         {
             title: "Fractional RevOps Leadership",
-            icon: <Anchor className="w-10 h-10 text-neon-blue" />,
+            icon: <Shield className="w-10 h-10 text-neon-blue" />,
             subtitle: "The Retainer",
-            desc: "Senior leadership without the headcount. I act as your Head of Ops to optimize workflows and align Sales & Marketing weekly.",
+            desc: "Senior leadership without the headcount. I act as your Head of Ops to optimize workflows and align teams weekly.",
             deliverables: ["Pipeline Reviews", "Strategy Alignment", "Continuous Optimization"],
             highlight: true
         },
@@ -25,7 +25,7 @@ const Services = () => {
             title: "Technical Lead Gen",
             icon: <Rocket className="w-10 h-10 text-neon-blue" />,
             subtitle: "The Fuel",
-            desc: "High-intent outbound systems. We use waterfall enrichment and signal-based scraping to land in the primary inbox.",
+            desc: "High-intent outbound systems. Waterfall enrichment and signal-based scraping to land in the primary inbox.",
             deliverables: ["ICP Development", "Cold Email Infrastructure", "Lead List Building"],
             highlight: false
         }
