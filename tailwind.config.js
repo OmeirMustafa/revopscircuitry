@@ -7,9 +7,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                'neon-blue': '#04d9ff',
-                'carbon-gray': '#121212',
-                'deep-black': '#050505',
+                'eng-dark': '#0f172a', // Slate 900
+                'eng-slate': '#334155', // Slate 700
+                'eng-blue': '#38bdf8', // Sky 400 (muted accent)
+                'eng-text': '#e2e8f0', // Slate 200
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

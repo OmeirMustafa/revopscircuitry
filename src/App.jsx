@@ -1,20 +1,11 @@
 import React from 'react';
 import { Navbar } from './components/Navigation'; // Adjusted to pull from Navigation.jsx which exports Navbar
 import Hero from './components/Hero';
-import TrustBar from './components/TrustBar';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
-import ValueProp from './components/ValueProp';
-import Symptoms from './components/Symptoms';
-import CoreOffer from './components/CoreOffer';
-import Transformation from './components/Transformation';
-import Process from './components/Process';
-import Proof from './components/Proof';
 import CaseStudies from './components/CaseStudies';
 import { Footer } from './components/Navigation'; // Pulling Footer from same file
-
-import WhyFractional from './components/WhyFractional';
 
 function App() {
   return (
@@ -22,11 +13,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <ValueProp />
-        <Proof />
-        <CaseStudies />
         <Services />
-        <Process />
+        <CaseStudies />
         <About />
         <Contact />
       </main>

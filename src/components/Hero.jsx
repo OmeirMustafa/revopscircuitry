@@ -33,29 +33,26 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-left"
                 >
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.1] mb-8 tracking-tight">
-                        Web Operations & <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-white/80">Reliability Strategies</span> <br />
-                        for SaaS, Scale Ops & High-Trust Digital Systems
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-eng-text leading-[1.1] mb-6 tracking-tight">
+                        Electronics & Circuitry <br />
+                        <span className="text-eng-blue">Engineering Solutions</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-white/80 mb-6 max-w-xl font-medium leading-relaxed">
-                        I help technology teams eliminate operational friction, improve reliability, and build resilient workflows that support growth and confidence.
-                    </p>
-                    
-                    <p className="text-sm md:text-base text-white/50 mb-10 max-w-xl font-light leading-relaxed">
-                        Ideal for SaaS teams, DevOps leaders, and engineering organizations seeking higher uptime, smoother deployments, and clearer operational strategy.
+                    <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-xl font-light leading-relaxed">
+                        Practical electronics & circuitry engineering partner that designs, prototypes, and optimizes real-world hardware systems.
+                        <br /><br />
+                        <span className="text-sm font-mono text-slate-500">From Idea → PCB → Working Prototype.</span>
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-5">
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="btn-primary-neon group relative overflow-hidden z-20"
+                            className="bg-eng-blue hover:bg-sky-400 text-slate-900 font-bold py-4 px-8 rounded transition-all shadow-[0_0_20px_rgba(56,189,248,0.2)]"
                         >
-                            <span className="relative z-10 font-bold text-black group-hover:text-black">Discuss Your Challenges</span>
+                            Discuss Your Project
                         </button>
-                        <Link to="proof" smooth={true} duration={800} offset={-70} className="btn-secondary-neon z-20 cursor-pointer">
-                            Explore My Work
+                        <Link to="services" smooth={true} duration={800} offset={-70} className="border border-slate-700 text-eng-text hover:border-eng-blue hover:text-eng-blue py-4 px-8 rounded transition-all cursor-pointer font-mono text-sm flex items-center justify-center">
+                            See Engineering Capabilities
                         </Link>
                     </div>
                 </motion.div>
