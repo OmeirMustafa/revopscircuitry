@@ -10,16 +10,36 @@ const ValueProp = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="max-w-4xl mx-auto text-center"
+                    className="max-w-4xl mx-auto"
                 >
-                    <span className="text-neon-blue font-mono text-sm tracking-widest uppercase mb-4 block">What I Solve</span>
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">
-                        Most teams don’t have a <span className="text-white/40 line-through decoration-neon-blue/50">revenue problem</span>. <br />
-                        They have a <span className="text-neon-blue">system problem</span>.
-                    </h2>
-                    <p className="text-xl text-white/70 leading-relaxed font-light">
-                        Gaps between marketing → sales → ops → success bleed pipeline, kill velocity, and create compounding inefficiency. I design and optimize the end-to-end engine so every part works together.
-                    </p>
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+                            Who I Help & What I Solve
+                        </h2>
+                        <p className="text-xl text-white/80 leading-relaxed font-light">
+                            I partner with engineering and technology teams that struggle with:
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        {[
+                            "Frequent outages or deployment failures",
+                            "Unclear operational boundaries and responsibilities",
+                            "Slow or inconsistent release cycles",
+                            "Lack of observable, repeatable DevOps processes"
+                        ].map((item, index) => (
+                            <div key={index} className="flex items-start bg-white/5 p-6 rounded-lg border border-white/10">
+                                <div className="w-2 h-2 rounded-full bg-neon-blue mt-2.5 mr-4 flex-shrink-0"></div>
+                                <p className="text-lg text-white/80">{item}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center">
+                        <p className="text-lg text-white/70 leading-relaxed font-medium">
+                            My focus is on solving these problems with clarity, precision, and real operational improvements — not templates or buzzword solutions.
+                        </p>
+                    </div>
                 </motion.div>
             </div>
         </section>

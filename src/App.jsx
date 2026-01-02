@@ -11,6 +11,7 @@ import CoreOffer from './components/CoreOffer';
 import Transformation from './components/Transformation';
 import Process from './components/Process';
 import Proof from './components/Proof';
+import CaseStudies from './components/CaseStudies';
 import { Footer } from './components/Navigation'; // Pulling Footer from same file
 
 import WhyFractional from './components/WhyFractional';
@@ -21,15 +22,11 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <TrustBar />
         <ValueProp />
-        <Symptoms />
-        <CoreOffer />
-        <Transformation />
-        <Process />
         <Proof />
+        <CaseStudies />
         <Services />
-        <WhyFractional />
+        <Process />
         <About />
         <Contact />
       </main>

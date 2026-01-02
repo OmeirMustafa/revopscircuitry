@@ -74,44 +74,58 @@ const ServiceCard = ({ product, index }) => {
 const Services = () => {
     const products = [
         {
-            title: "Revenue Infrastructure Build",
-            icon: <Database className="w-10 h-10 text-neon-blue" />,
-            subtitle: "The Flagship",
-            desc: "One-time architectural overhaul. I migrate, clean, and architect your CRM to be the single source of truth.",
-            deliverables: ["Tech Stack Audit", "CRM Architecture", "Data Enrichment Layers"],
+            title: "Operational Diagnostics",
+            icon: <Shield className="w-10 h-10 text-neon-blue" />,
+            subtitle: "The Audit",
+            desc: "Identify gaps in reliability, process, and team workflow that cause outages or slow cycles.",
+            deliverables: ["System Health Check", "Workflow Analysis", "Risk Assessment"],
             details: [
-                "CRM Architecture & Cleaning",
-                "Data Enrichment Setup (Apollo/Clay)",
-                "Automation Workflow Mapping",
-                "**Est. Timeline:** 2-4 Weeks"
+                "Full Stack Analysis",
+                "Bottleneck Identification",
+                "Actionable Remediations",
+                "**Timeline:** 1-2 Weeks"
             ],
             highlight: false
         },
         {
-            title: "Fractional RevOps Leadership",
-            icon: <Shield className="w-10 h-10 text-neon-blue" />,
-            subtitle: "The Retainer",
-            desc: "Senior leadership without the headcount. I act as your Head of Ops to optimize workflows and align teams weekly.",
-            deliverables: ["Pipeline Reviews", "Strategy Alignment", "Continuous Optimization"],
+            title: "DevOps Strategy & Implementation",
+            icon: <Database className="w-10 h-10 text-neon-blue" />,
+            subtitle: "The Foundation",
+            desc: "Create resilient workflows that address real business needs — not just trendy tech.",
+            deliverables: ["CI/CD Design", "Infrastructure as Code", "Scalability Planning"],
             details: [
-                "Weekly Pipeline Reviews",
-                "Sales/Marketing Alignment",
-                "Tech Stack Management",
-                "**Commitment:** Monthly Retainer"
+                "Toolchain Selection",
+                "Process Auditing",
+                "Team Training",
+                "**Outcome:** Scalable Ops"
             ],
             highlight: true
         },
         {
-            title: "Technical Lead Gen",
+            title: "Release & Deployment Optimization",
             icon: <Rocket className="w-10 h-10 text-neon-blue" />,
-            subtitle: "The Fuel",
-            desc: "High-intent outbound systems. Waterfall enrichment and signal-based scraping to land in the primary inbox.",
-            deliverables: ["ICP Development", "Cold Email Infrastructure", "Lead List Building"],
+            subtitle: "The Accelerator",
+            desc: "Reduce friction in deployment pipelines and improve confidence in releases.",
+            deliverables: ["Automated Pipelines", "Rollback Strategies", "Environment Management"],
             details: [
-                "ICP Development",
-                "Cold Email Infrastructure (DNS/DMARC)",
-                "1000+ Verified Leads/Mo",
-                "**Model:** Pay Per Performance Option"
+                "Zero-Downtime Deploys",
+                "Canary / Blue-Green",
+                "Release Governance",
+                "**Goal:** Faster TTM"
+            ],
+            highlight: false
+        },
+        {
+            title: "Observability & Monitoring Setup",
+            icon: <Shield className="w-10 h-10 text-neon-blue" />,
+            subtitle: "The Watchtower",
+            desc: "Turn noise into meaningful signals for faster, actionable resolution.",
+            deliverables: ["Alert Tuning", "Dashboard Creation", "SLO Definition"],
+            details: [
+                "Log Aggregation",
+                "Incident Response Plans",
+                "Tracing Setup",
+                "**Outcome:** Reduced MTTR"
             ],
             highlight: false
         }
@@ -122,10 +136,10 @@ const Services = () => {
             <div className="container px-4">
                 <div className="text-center mb-16">
                     <span className="text-neon-blue font-mono text-sm tracking-widest uppercase mb-4 block">What I Do</span>
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white">Strategic Revenue Products</h2>
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white">Strategic Operations</h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
                     {products.map((product, i) => (
                         <ServiceCard key={i} product={product} index={i} />
                     ))}

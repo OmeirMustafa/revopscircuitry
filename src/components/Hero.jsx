@@ -34,13 +34,17 @@ const Hero = () => {
                     className="text-left"
                 >
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.1] mb-8 tracking-tight">
-                        I Design Revenue <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-white/80">Systems That Scale</span> <br />
-                        Without Chaos
+                        Web Operations & <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-white/80">Reliability Strategies</span> <br />
+                        for SaaS, Scale Ops & High-Trust Digital Systems
                     </h1>
 
-                    <p className="text-lg md:text-xl text-white/60 mb-10 max-w-xl font-light leading-relaxed">
-                        Fractional RevOps + Revenue Architecture for teams that want predictable growth, clean data, automated processes, and zero operational bottlenecks.
+                    <p className="text-lg md:text-xl text-white/80 mb-6 max-w-xl font-medium leading-relaxed">
+                        I help technology teams eliminate operational friction, improve reliability, and build resilient workflows that support growth and confidence.
+                    </p>
+                    
+                    <p className="text-sm md:text-base text-white/50 mb-10 max-w-xl font-light leading-relaxed">
+                        Ideal for SaaS teams, DevOps leaders, and engineering organizations seeking higher uptime, smoother deployments, and clearer operational strategy.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-5">
@@ -48,10 +52,10 @@ const Hero = () => {
                             onClick={() => setIsModalOpen(true)}
                             className="btn-primary-neon group relative overflow-hidden z-20"
                         >
-                            <span className="relative z-10 font-bold text-black group-hover:text-black">Request a Revenue Architecture Audit</span>
+                            <span className="relative z-10 font-bold text-black group-hover:text-black">Discuss Your Challenges</span>
                         </button>
-                        <Link to="process" smooth={true} duration={800} offset={-70} className="btn-secondary-neon z-20 cursor-pointer">
-                            See How I Work
+                        <Link to="proof" smooth={true} duration={800} offset={-70} className="btn-secondary-neon z-20 cursor-pointer">
+                            Explore My Work
                         </Link>
                     </div>
                 </motion.div>

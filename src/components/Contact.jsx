@@ -19,9 +19,8 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 tracking-tight">
-                        Let’s Architect Your <br />
-                        <span className="text-neon-blue">Revenue Engine</span>
+                    <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 tracking-tight">
+                        Ready for <span className="text-neon-blue">Reliable Growth?</span>
                     </h2>
 
                     <motion.div
@@ -33,7 +32,7 @@ const Contact = () => {
                             onClick={() => setIsModalOpen(true)}
                             className="btn-primary-neon text-xl px-10 py-5 shadow-[0_0_50px_rgba(57,169,255,0.3)] hover:shadow-[0_0_80px_rgba(57,169,255,0.5)]"
                         >
-                            Request a Revenue Architecture Audit
+                            See If This Is a Fit
                         </button>
                     </motion.div>
 
